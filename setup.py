@@ -16,10 +16,11 @@ setuptools.setup(
     author="author",
 
     package_dir={"": "kinesis_tumbling_window_analytics"},
-    packages=setuptools.find_packages(where="kinesis_tumbling_window_analytics"),
+    packages=setuptools.find_packages(
+        where="kinesis_tumbling_window_analytics"),
 
     install_requires=[
-        "aws-cdk.core==1.85.0",
+        "aws-cdk.core==1.87.0",
     ],
 
     python_requires=">=3.6",
