@@ -26,7 +26,7 @@ We will use the `store_id` to summarize the `sales` and calculate the `revenue` 
 
 ![Miztiik Automation: Streaming Analytics Using Kinesis Data Analytics](images/miztiik_automation_kinesis_tumbling_window_analytics_architecture_04.png)
 
-In this example, I am going to be using Kinesis fireshose to store the events in S3. Before ingesting the revenue records in S3, I am going to use a lambda function to do some basic transformation like adding a _new line_ character between each record coming from KDA. This will help data processing in the future using Redshift/Athena.
+In this example, I am going to be using Kinesis firehose to store the events in S3. Before ingesting the revenue records in S3, I am going to use a lambda function to do some basic transformation like adding a _new line_ character between each record coming from KDA. This will help data processing in the future using Redshift/Athena.
 
 The final AWS architecture looks something like,
 ![Miztiik Automation: Streaming Analytics Using Kinesis Data Analytics](images/miztiik_automation_kinesis_tumbling_window_analytics_architecture_00.png)
