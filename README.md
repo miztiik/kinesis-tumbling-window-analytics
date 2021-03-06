@@ -1,13 +1,13 @@
 # Streaming Analytics Using Kinesis Data Analytics
 
-The executives at Mystique Unicorn are interested in getting near real-time insights into the sales performance of their stores. They are mutliple stores in multiple locations. All of these stores send their sales records as a stream of events to a kinesis data stream at regular intervals throughout the day. They would like to have a real-time dashboard that shows them the sales revenue per store. In future they would like to expand this capability to drill down to find out which category is most popular. For example, A typical question that often gets asked is, Which category did we sell more today? _Electronics_ or _Books_? 
+The executives at Mystique Unicorn are interested in getting near real-time insights into the sales performance of their stores. They are multiple stores in multiple locations. All of these stores send their sales records as a stream of events to a kinesis data stream at regular intervals throughout the day. They would like to have a real-time dashboard that shows them the sales revenue per store. In future they would like to expand this capability to drill down to find out which category is most popular. For example, A typical question that often gets asked is, Which category did we sell more today? _Electronics_ or _Books_? 
 
 They heard that AWS offers analytics capabilities on streaming events of data. Can you help them?
 
 
 ## 🎯 Solutions
 
-AWS offers multiple capabilities to peform analytics on streaming data. As they are using kinesis data streams to ingest the stream of sales events, We can leverage Kinesis Data Analytics capability with AWS to perform stream analytics using regular `SQL` or `Apache Flink`. In this solution, we will use simple SQL query to calculate the `revenue_per_store` metric and store the value in S3 for further processing.
+AWS offers multiple capabilities to perform analytics on streaming data. As they are using kinesis data streams to ingest the stream of sales events, We can leverage Kinesis Data Analytics capability with AWS to perform stream analytics using regular `SQL` or `Apache Flink`. In this solution, we will use simple SQL query to calculate the `revenue_per_store` metric and store the value in S3 for further processing.
 
 ![Miztiik Automation: Streaming Analytics Using Kinesis Data Analytics](images/miztiik_automation_kinesis_tumbling_window_analytics_architecture_03.png)
 
@@ -22,7 +22,7 @@ The incoming data event payload looks something like this.
 }
 ```
 
-We will use the `store_id` to summarize the `sales` and calculate the `revenue` of that store for a given period of time. Let us assume, we want to calculate the revenue of each store `per_minute`. At this point we will have a stream revnenue events from kinesis analytics(KDA). We can use either data stream or firehose depending upon the downstream consumers. 
+We will use the `store_id` to summarize the `sales` and calculate the `revenue` of that store for a given period of time. Let us assume, we want to calculate the revenue of each store `per_minute`. At this point we will have a stream revenue events from kinesis analytics(KDA). We can use either data stream or firehose depending upon the downstream consumers. 
 
 ![Miztiik Automation: Streaming Analytics Using Kinesis Data Analytics](images/miztiik_automation_kinesis_tumbling_window_analytics_architecture_04.png)
 
@@ -59,7 +59,7 @@ In this article, we will build an architecture, similar to the one shown above. 
 
     ```bash
     # You should have npm pre-installed
-    # If you DONT have cdk installed
+    # If you DO NOT have cdk installed
     npm install -g aws-cdk
 
     # Make sure you in root directory
@@ -193,7 +193,7 @@ In this article, we will build an architecture, similar to the one shown above. 
 
 ## 📌 Who is using this
 
-This repository aims to show how to perform streaming analtics to new developers, Solution Architects & Ops Engineers in AWS. Based on that knowledge these Udemy [course #1][103], [course #2][102] helps you build complete architecture in AWS.
+This repository aims to show how to perform streaming analytics to new developers, Solution Architects & Ops Engineers in AWS. Based on that knowledge these Udemy [course #1][103], [course #2][102] helps you build complete architecture in AWS.
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
